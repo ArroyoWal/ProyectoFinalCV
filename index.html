@@ -1,0 +1,113 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto Final - Curriculum Vitae</title>
+  <meta name="description" content="Proyecto Final - Argentina Programa Front end Academy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--  CSS-->
+  <link rel="stylesheet" href="css/main.css">
+
+<!--  Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Nunito&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <!--  Font Awesome-->
+  <script src="https://kit.fontawesome.com/53e32b1316.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+
+  <header>
+    <h2 class="name">Nombre y Apellido</h2>
+    <h3>Curriculum Vitae</h3>
+
+  </header>
+
+  <section class="content">
+
+    <div class="item">
+      <div id="profile">
+        <div>
+          <img id="picture" src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+        </div>
+
+        <span id="socialMedia">
+            <a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+        </span>
+
+
+        <div>
+          <p id="aboutme"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div id="information">
+        <nav class="menu">
+          <ul>
+            <li><a href="#" onclick="viewInfo()">
+              <i class="fa-solid fa-address-card"></i> Información Personal</a>
+            </li>
+            <li><a href="#" onclick="viewExperience()">
+              <i class="fa-solid fa-briefcase"></i> Experiencia</a></li>
+            <li><a href="#" onclick="viewAbilities()">
+              <i class="fa-solid fa-code-branch"></i> Habilidades</a></li>
+          </ul>
+        </nav>
+
+        <article id="personalInfo">
+          <ul>
+            <li>
+              <strong>Nombre Completo: </strong> <spa class="name"></spa>
+            </li>
+            <li>
+              <strong>Edad: </strong> <spa id="age"></spa>
+            </li>
+            <li>
+              <strong>Teléfono: </strong> <spa id="phone"></spa>
+            </li>
+            <li>
+              <strong>Correo electrónico: </strong> <span id="email"></span>
+            </li>
+            <li>
+              <strong>Direccion: </strong> <span id="adress"></span>
+            </li>
+          </ul>
+
+
+        </article>
+
+        <article id="experience">
+            <ul>
+              <p id="experienceCV"></p>
+            </ul>
+        </article>
+
+        <article id="abilities">
+            <p id="abilitiesCV"></p>
+        </article>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <span>Proyecto Final - Front end Academy <i class="fa-regular fa-copyright"></i> </span>
+    <span>2023</span>
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

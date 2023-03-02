@@ -1,0 +1,109 @@
+html {
+  font-family: 'Nunito', sans-serif;
+  background-color: #F2F2F2;
+  color: #3B568C;
+  font-size: 1.2em;
+}
+
+header {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: #8C8070;
+}
+
+.content {
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-content: space-between;
+  border: 5px solid #3B568C;
+  border-radius: 10px;
+  margin: 0px 200px 0px 200px;
+}
+
+.item {
+  display: grid;
+  border: 2px solid #F2F2F2;
+}
+
+#profile {
+  background-color: #91B7D9;
+  color: #F2F2F2;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+#profile img {
+  border-radius: 160px 160px 160px 160px;
+  border: 5px solid #42628C;
+}
+
+#socialMedia a {
+  text-decoration: none;
+  color: #42628C;
+}
+
+#socialMedia a:hover {
+  color: #F2F2F2;
+  transition: 0.3s;
+}
+
+#aboutme {
+  background-color: #F2F2F2;
+  color: #42628C;
+  font-size: 1em;
+  border-radius: 10px 10px 10px 10px;
+  border: 5px solid #F2F2F2;
+  margin: 15px;
+  padding: 5px;
+  max-height: 500px;
+  max-width: 500px;
+  text-align: center;
+}
+
+#information {
+  background-color: #42628C;
+  color: #F2F2F2;
+  display: grid;
+  justify-items: center;
+  align-content: space-evenly;
+}
+
+article {
+  display: grid;
+  margin: 25px;
+  min-height: 200px;
+
+}
+
+.menu {
+  font-size: 1em;
+}
+
+.menu ul li{
+  display: inline-flex;
+}
+
+.menu a{
+  text-decoration: none;
+  padding: 10px;
+  color: #91B7D9;
+}
+
+.menu a:hover {
+  color: #F2F2F2;
+  transition: 0.3s;
+}
+
+
+
+footer {
+  padding-top: 100px;
+  text-align: center;
+
+}
+
+
