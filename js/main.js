@@ -7,9 +7,9 @@ function getPeople(){
             let people = data.results;
             return people.map(function (person) {
                 document.getElementById('picture').src = person.picture.large;
+                document.getElementsByClassName('logo')[0].innerText = `${person.name.first[0]}${person.name.last[0]}`;
                 document.getElementsByClassName('name')[0].innerText = `${person.name.first} ${person.name.last}`;
                 document.getElementsByClassName('name')[1].innerText = `${person.name.first} ${person.name.last}`;
-                document.getElementById('age').innerHTML = person.dob.age;
                 document.getElementById('phone').innerHTML = person.phone;
                 document.getElementById('email').innerHTML = person.email;
                 document.getElementById('adress').innerHTML = `${person.location.street.name} ${person.location.street.number}`;
@@ -125,9 +125,22 @@ function getAbilitiesF(){
 
 }
 
-function viewInfo(){
+function viewProfile(){
+    let articlePersonalInfo = document.getElementById('profile');
+
+
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('personalInfo').style.display = 'none';
+    document.getElementById('experience').style.display = 'none';
+    document.getElementById('abilities').style.display = 'none';
+    fadeIn(articlePersonalInfo);
+}
+
+function viewContact(){
     let articlePersonalInfo = document.getElementById('personalInfo');
 
+    document.getElementById('profile').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
     document.getElementById('experience').style.display = 'none'
     document.getElementById('abilities').style.display = 'none';
     fadeIn(articlePersonalInfo);
@@ -137,7 +150,9 @@ function viewInfo(){
 function viewExperience(){
     let articleExperiencie = document.getElementById('experience');
 
+    document.getElementById('profile').style.display = 'none';
     document.getElementById('personalInfo').style.display = 'none';
+    document.getElementById('experience').style.display = 'none';
     document.getElementById('abilities').style.display = 'none';
     fadeIn(articleExperiencie);
 
@@ -146,6 +161,7 @@ function viewExperience(){
 function viewAbilities(){
     let articleAbilities = document.getElementById('abilities');
 
+    document.getElementById('profile').style.display = 'none';
     document.getElementById('personalInfo').style.display = 'none';
     document.getElementById('experience').style.display = 'none';
     fadeIn(articleAbilities);
@@ -153,6 +169,9 @@ function viewAbilities(){
 }
 
 function hiddenExperienceAbilities(){
+
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById('personalInfo').style.display = 'none';
     document.getElementById('experience').style.display = 'none';
     document.getElementById('abilities').style.display = 'none';
 }
