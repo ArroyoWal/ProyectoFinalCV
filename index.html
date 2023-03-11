@@ -1,78 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Proyecto Final - Curriculum Vitae</title>
   <meta name="description" content="Proyecto Final - Argentina Programa Front end Academy">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--  CSS-->
+  <!--  CSS-->
   <link rel="stylesheet" href="css/main.css">
 
-<!--  Google Font-->
+  <!--  Google Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Nunito&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Montserrat&family=Nunito&family=Roboto:wght@300&family=Russo+One&display=swap" rel="stylesheet">
 
   <!--  Font Awesome-->
   <script src="https://kit.fontawesome.com/53e32b1316.js" crossorigin="anonymous"></script>
 
 </head>
 
+
 <body>
 
-  <!-- Add your site or application content here -->
+
+<div class="container">
 
   <header>
-    <h2 class="name">Nombre y Apellido</h2>
-    <h3>Curriculum Vitae</h3>
+    <div>
+      <a class="logo"></a><a href="#" onclick="viewProfile()" class="name"></a>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="viewProfile()">
+            Perfil</a>
+          </li>
+          <li><a href="#" onclick="viewExperience()">
+            Experiencia </a>
+          </li>
+          <li><a href="#" onclick="viewAbilities()">
+            Habilidades</a>
+          </li>
+          <li><a href="#" onclick="viewContact()">
+            Contacto </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
 
   </header>
 
-  <section class="content">
 
-    <div class="item">
-      <div id="profile">
-        <div>
-          <img id="picture" src="" alt="">
-        </div>
 
+  <main>
+
+    <article id="profile">
+      <div id="picturePerson">
+        <img id="picture" src="" alt="" >
+      </div>
+      <div>
+        <h1 class="name"></h1>
         <span id="socialMedia">
-            <a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
-        </span>
-
-
+                        <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                        <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </span>
         <div>
-          <p id="aboutme"></p>
+          <p id="aboutme">
+          </p>
+          <div id="buttons">
+            <button class="button-profile" role="button">Descargar CV</button>
+            <button class="button-profile" role="button">Contacto</button>
+          </div>
         </div>
       </div>
-    </div>
+    </article>
 
-    <div class="item">
-      <div id="information">
-        <nav class="menu">
-          <ul>
-            <li><a href="#" onclick="viewInfo()">
-              <i class="fa-solid fa-address-card"></i> Información Personal</a>
-            </li>
-            <li><a href="#" onclick="viewExperience()">
-              <i class="fa-solid fa-briefcase"></i> Experiencia</a></li>
-            <li><a href="#" onclick="viewAbilities()">
-              <i class="fa-solid fa-code-branch"></i> Habilidades</a></li>
-          </ul>
-        </nav>
+    <article id="personalInfo">
+      <div class="iconPersona">
+        <i class="fa-solid fa-address-card"></i>
+      </div>
+      <div>
+        <h1>Contacto</h1>
 
-        <article id="personalInfo">
+        <div>
           <ul>
             <li>
-              <strong>Nombre Completo: </strong> <spa class="name"></spa>
-            </li>
-            <li>
-              <strong>Edad: </strong> <spa id="age"></spa>
-            </li>
-            <li>
-              <strong>Teléfono: </strong> <spa id="phone"></spa>
+              <strong>Teléfono: </strong> <span id="phone"></span>
             </li>
             <li>
               <strong>Correo electrónico: </strong> <span id="email"></span>
@@ -82,32 +98,80 @@
             </li>
           </ul>
 
+        </div>
 
-        </article>
+        <hr>
 
-        <article id="experience">
-            <ul>
-              <p id="experienceCV"></p>
-            </ul>
-        </article>
+        <div class="">
+          <form action="action_page.php">
 
-        <article id="abilities">
-            <p id="abilitiesCV"></p>
-        </article>
+            <label for="fname">Nombre y Apellido</label>
+            <input type="text" id="fname" name="firstname" placeholder="">
+
+            <label for="subject">Mensaje</label>
+            <textarea id="subject" name="subject" placeholder="Escribe algo.." style="height:200px"></textarea>
+
+            <input type="submit" class="button-profile" value="Enviar">
+
+          </form>
+        </div>
 
       </div>
-    </div>
 
-  </section>
+    </article>
 
-  <footer>
-    <span>Proyecto Final - Front end Academy <i class="fa-regular fa-copyright"></i> </span>
-    <span>2023</span>
-  </footer>
+    <article id="experience">
+      <div class="iconPerson">
+        <i class="fa-solid fa-briefcase"></i>
+      </div>
+      <div>
+        <h1>Experiencia</h1>
+        <div>
+          <ul>
+            <p id="experienceCV"></p>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article id="abilities">
+      <div class="iconPerson">
+        <i class="fa-solid fa-code-branch"></i>
+      </div>
+      <div>
+        <h1>Habilidades</h1>
+        <div>
+          <p id="abilitiesCV"></p>
+        </div>
+      </div>
+    </article>
+
+    <article id="contact">
+      <div class="iconPerson">
+        <i class="fa-solid fa-code-branch"></i>
+      </div>
+      <div>
+        <h1>Contacto</h1>
+      </div>
+    </article>
 
 
 
-  <script src="js/main.js"></script>
+  </main>
+
+
+
+
+
+
+</div>
+
+<footer>
+
+  <span>Curriculum Vitae -  <i class="fa-regular fa-copyright"></i> 2023</span>
+</footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
